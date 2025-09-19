@@ -1,0 +1,118 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 70px; /* Set a fixed height */
+  
+  /* Professional Glassmorphism Effect */
+  background-color: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  
+  /* Sticky Navbar */
+  position: sticky;
+  top: 0;
+  width: calc(100% - 4rem); /* Adjust width to account for padding */
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-logo {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  color: var(--primary-accent); /* Use accent color for the logo */
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: var(--primary-text);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Underline effect on hover */
+.nav-menu li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-accent);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-menu li a:hover {
+  color: var(--primary-accent);
+}
+
+.nav-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu Icon styling */
+.menu-icon {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-text);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animate hamburger to 'X' */
+.menu-icon .bar1.open {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu-icon .bar2.open {
+  opacity: 0;
+}
+.menu-icon .bar3.open {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: -100%; /* Start off-screen */
+    width: 100%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    background-color: var(--background-color);
+    transition: right 0.4s ease-in-out;
+  }
+
+  .nav-menu.active {
+    right: 0; /* Slide into view */
+  }
+
+  .menu-icon {
+    display: flex; /* Show the hamburger icon */
+  }
+}

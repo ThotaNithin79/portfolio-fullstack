@@ -1,0 +1,52 @@
+/* 1. Global Styles & Design System */
+:root {
+  --background-color: #121212;
+  --card-color: #1E1E1E;
+  --primary-accent: #03DAC6;
+  --primary-text: rgba(255, 255, 255, 0.87);
+  --secondary-text: rgba(255, 255, 255, 0.6);
+  --font-headings: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--background-color);
+  color: var(--primary-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Global Component Styles */
+section {
+  padding: 5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+h2 { /* For section titles */
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-accent);
+}
+
+p {
+  color: var(--secondary-text);
+  line-height: 1.7;
+}
+
+/* Add smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}

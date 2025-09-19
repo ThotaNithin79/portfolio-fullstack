@@ -1,0 +1,68 @@
+.skills-container {
+  background-color: var(--background-color);
+  padding: 5rem 2rem;
+}
+
+/* We can use the global h2 style from App.css, so no need to style it here */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-category-card {
+  background-color: var(--card-color);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Professional hover effect */
+.skill-category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px var(--primary-accent);
+}
+
+.skill-category-card h3 {
+  font-family: var(--font-headings);
+  font-size: 1.4rem;
+  color: var(--primary-text);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary-accent);
+  padding-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
+}
+
+/* Style the icons */
+.skill-item svg {
+  font-size: 1.5rem; /* Make icons larger */
+}
