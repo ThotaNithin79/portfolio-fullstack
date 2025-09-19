@@ -1,7 +1,7 @@
 # --- Build Stage ---
 # Use an official OpenJDK 17 image as a parent image for building
 # The 'as builder' part names this stage so we can refer to it later
-FROM openjdk:17-jdk-slim as builder
+FROM eclipse-temurin:17-jre-focal
 
 # Set the working directory inside the container
 WORKDIR /app
