@@ -112,3 +112,4 @@
   .contact-layout {
     grid-template-columns: 1fr; /* Stack columns on smaller screens */
   }
+}
